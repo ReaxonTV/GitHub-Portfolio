@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="This is Joel" content="width=device-width, initial-scale=1" />
 
-    <title>This is Joel</title>
+    <title>Portfolio Joel</title>
     <meta
       name="On this Website, I will introduce myself."
       content="We will see..."
@@ -15,39 +15,165 @@
     <link rel="stylesheet" href="/main.css" />
   </head>
 
-  <nav>
-    <ul>
-      <li style="float: right">
-        <a class="active" href="#about">Lebenslauf</a>
-      </li>
-      <li style="float: right"><a class="active" href="#about">Goals</a></li>
-      <li style="float: right"><a class="active" href="#about">Kontakt</a></li>
-      <li style="float: right"><a class="active" href="#about">Sprache</a></li>
-    </ul>
-  </nav>
-
-  <div class="flex-container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-  </div>
-
   <body>
-    <h1>No beat - No me!</h1>
-    <h2>These beats help me through the day.</h2>
-    <p>
-      Whether i'm getting my morning shower, taking the train to work or even
-      sometimes at work, i'm always listening to music. My playlist helps me to
-      work faster, be more concentrated and lights up my mood. That's why over
-      the last 5 years, a mixed playlist with my favorite songs from all kind of
-      genres came together. Because music is such an important part in my life,
-      I want to share my playlist with you, so hit the button, while you read
-      more about me.
-    </p>
-    <script
-      src="https://open.spotify.com/embed-podcast/iframe-api/v1"
-      async
-    ></script>
-    <div id="embed-iframe"></div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Erin Manahan</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="nav-about"><a href="#about">Über mich</a></li>
+            <li id="nav-portfolio"><a href="#portfolio">Lebenslauf</a></li>
+            <li id="nav-goals"><a href="#portfolio">Goals</a></li>
+            <li id="nav-contact"><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container-fluid">
+      
+      <div class="row cover top champions">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-12 headline">
+
+              <h1 class="background text-center">Hallo, mein Name ist Joel. </h1>
+              <p class="lead text-center">Gerne lade ich euch ein, mich ein wenig besser kennenzulernen. Aber bevor ihr weiterscrollt: Egal ob ich dusche, auf der Arbeit bin, zuhause versuche zu coden, im Zug, im Auto - whatever and wherever -> 
+                ich vibe zu meiner Playlist. Es motiviert mich, was auch immmer ich tue, besser zu tun. Folglich klickt doch zuerst auf den Play Button, um meine abwechslungsreiche Playlist zu hören, währenddem ihr mehr über mich erfahrt.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 center-block text-center">
+              <a href="#about"><span id="scrollIcon" class="front-glyph glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div id="about" class="row cover">
+        <h2 class="text-center">Über mich</h2>
+        <div class="row">
+          <div class="col-md-6 text-center about-info">
+            <img class="profile-img" src="./Joel.jpg">
+            <p class="text-center">Wer ich bin? Nun ich bin vieles: Fussball-Fanatiker, treuer Fan, Möchtegern Gamer, noch mehr Möchtegern Videomaker, 
+              Junior Business Analyst bei der Valiant Bank, schnell Begeisterungsfähig, noch schneller Motivationsverlierend.... ich bin also vielseitig und bin gerne im Kontakt mit Menschen aller Art.</p>
+          </div>
+          <div class="col-md-6 about-tools">
+            <p class="text-center">Here's a few of the tools I use</p>
+              <div class="col-xs-6">
+                <ul>
+                  <img class= "logo" src="./html.png" alt="HTML5">
+                  <img class= "logo" src="./css.png" alt="CSS3">
+                  <img class= "logo" src="./Javascipt.png" alt="JavaScript">
+                  <img class= "logo" src="./Bootstrap.png" alt="Bootstrap">
+                  <img class= "logo" src="./Python.png" alt="Python">
+                  <img class= "logo" src="./rstudio.png" alt="R Studio">
+                  <img class= "logo" src="./github.png" alt="GitHub">
+                </ul>
+              </div>
+              </div>
+            
+          </div>
+          <div class="row break">
+            <div class="col-md-6 about-last">
+              <p class="text-center">Check out my latest projects <span class="glyphicon glyphicon-arrow-down"></span></p>
+            </div>
+          </div>
+        </div> 
+      </div><!-- End #About -->
+
+      <div id="portfolio" class="row cover">
+        <h2 class="text-center">Portfolio</h2>
+        <div class="container">
+          <div class="row portfolio-projects"> <!-- Two project row-->
+            <div class="col-lg-6"> <!--1st side project -->
+              <div class="row"> 
+                <div class="col-sm-5 text-center">
+                  <h4 class="portfolio-projects--title">Earth Quotes</h4>
+                  <p class="portfolio-projects--desc">Random quotes shown over google earth images</p>
+                  <p class="portfolio-projects--desc">Uses: Javascript, JQuery, Bootstrap</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Earth-Quotes/#" role="button">View Project</a>
+                </div>
+                <div class="col-sm-7 text-center">
+                  <img class="portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-quotes.png">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6"> <!--2nd side project -->
+              <div class="row"> 
+                <div class="col-sm-5 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <h4 class="portfolio-projects--title">Task Timer</h4>
+                  <p class="portfolio-projects--desc">A Pomodoro clock timer with a task list integration</p>
+                  <p class="portfolio-projects--desc">Uses: Javascript, JQuery, Bootstrap</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Task-Timer/" role="button">View Project</a>
+                </div>
+                <div class="col-sm-7 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <img class="img-rounded portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-task-timer.png">
+                </div>
+              </div>
+            </div>
+          </div><!--end Two project row-->
+
+          <div class="row portfolio-projects"> <!-- Opposite Two project row-->
+            <div class="col-lg-6"> <!--1st side project -->
+              <div class="row"> 
+                <div class="col-sm-5 text-center">
+                  <h4 class="portfolio-projects--title">Whats the Weather</h4>
+                  <p class="portfolio-projects--desc">A weather app to check current weather conditions.</p>
+                  <p class="portfolio-projects--desc">Uses: Javascript, Jquery, APIs</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Weather/" role="button">View Project</a>
+                </div>
+                <div class="col-sm-7 text-center">
+                  <img class="img-rounded portfolio-projects--image" src="https://sonorangirl.github.io/img/weather-slice.png">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6"> <!--2nd side project -->
+              <div class="row"> 
+                <div class="col-sm-5 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <h4 class="portfolio-projects--title">Simon Game</h4>
+                  <p class="portfolio-projects--desc">A simple recreation of the 80s game Simon.</p>
+                  <p class="portfolio-projects--desc">Uses: Javascript, Sass, JQuery</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Simon-Game/" role="button">View Project</a>
+                </div>
+                <div class="col-sm-7 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <img class="img-rounded portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-simon.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+
+      <div id="contact" class="row cover bottom">
+        <h2 class="text-center contact-header">Kontakt</h2>
+        <p class="text-center contact-email">Fragen zu meiner Playlist? Eventplanung im Bereich Fussball oder Gaming? Kontaktiere mich! <span class="glyphicon glyphicon-arrow-right"></span> joelbettler99@gmail.com</p>
+        <div class="text-center contact-social-icons">
+          <p>Oder auch auf:</p>
+          <ul class="centered">
+            <a href="https://www.linkedin.com/in/emanahan"><li><i class="fa fa-linkedin-square"></i> LinkedIn</li></a>
+            <a href="https://github.com/ReaxonTV"><li><i class="fa fa-github"></i> Github</li></a>
+            <a href="https://twitter.com/sonoran_girl"><li><i class="fa fa-insta"></i> Instagram</li></a>
+          </ul>
+        </p>
+        
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+      </div>
+    </footer>
+
   </body>
-</html>
