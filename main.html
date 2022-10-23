@@ -38,20 +38,60 @@
 
     <!-- Begin page content -->
     <div class="container-fluid">
-      
       <div class="row cover top champions">
         <div class="col-xs-12">
           <div class="row">
-            <div class="col-xs-12 headline">
+            <div class="col-xs-6">
+              <h1>Pick a song...</h1>
+              <ul id="tracks">
+                <li>
+                  <button data-spotify-id="spotify:track:4RmSuRMlr17amYP0bKlxaf?si=64b8bdd307a947d5">
+                    Champions League
+                  </button>
+                </li>
+                <li>
+                  <button data-spotify-id="spotify:track:7li2B5ovRTzE42gHvoxN8H?si=bd998aa09f4440f2">
+                    Europa League
+                  </button>
+                </li>
+                <li>
+                  <button data-spotify-id="spotify:track:7z5G2LOdV8okZn4yWg3q5g?si=8a47dad5e36c44d7">
+                    Drei
+                  </button>
+                </li>
+              </ul>
 
-              <h1 class="background text-center">Hallo, mein Name ist Joel. </h1>
-              <p class="lead text-center">Gerne lade ich euch ein, mich ein wenig besser kennenzulernen. Aber bevor ihr weiterscrollt: Egal ob ich dusche, auf der Arbeit bin, zuhause versuche zu coden, im Zug, im Auto - whatever and wherever -> 
-                ich vibe zu meiner Playlist. Es motiviert mich, was auch immmer ich tue, besser zu tun. Folglich klickt doch zuerst auf den Play Button, um meine abwechslungsreiche Playlist zu hören, währenddem ihr mehr über mich erfahrt.</p>
+              <div id="embed-iframe"></div>
+              <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async>
+              </script>
+              <script type="text/javascript">
+                window.onSpotifyIframeApiReady = (IFrameAPI) => {
+                  let element = document.getElementById('embed-iframe');
+                  let options = {
+                      width: '60%',
+                      height: '200',
+                      uri: 'spotify:track:4RmSuRMlr17amYP0bKlxaf?si=af8cfcb01f334364'
+                    };
+                  let callback = (EmbedController) => {
+                    document.querySelectorAll('ul#tracks > li > button').forEach(
+                      track => {
+                        track.addEventListener('click', () => {
+                          EmbedController.loadUri(track.dataset.spotifyId)
+                        });
+                      })
+                  };
+                  IFrameAPI.createController(element, options, callback);
+                };
+              </script>
             </div>
           </div>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4RmSuRMlr17amYP0bKlxaf?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           <div class="row">
-            <div class="col-xs-12 center-block text-center">
-              <a href="#about"><span id="scrollIcon" class="front-glyph glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+            <div class="col-xs-6 headline">
+
+              <h1 class="background">Hallo, mein Name ist Joel. </h1>
+              <p class="lead">Gerne lade ich euch ein, mich ein wenig besser kennenzulernen. Aber bevor ihr weiterscrollt: Egal ob ich dusche, auf der Arbeit bin, zuhause versuche zu coden, im Zug, im Auto - whatever and wherever -> 
+                ich vibe zu meiner Playlist. Es motiviert mich, was auch immmer ich tue, besser zu tun. Folglich klickt doch zuerst auf den Play Button, um meine abwechslungsreiche Playlist zu hören, währenddem ihr mehr über mich erfahrt.</p>
             </div>
           </div>
         </div>
@@ -67,7 +107,7 @@
               Junior Business Analyst bei der Valiant Bank, schnell Begeisterungsfähig, noch schneller Motivationsverlierend.... ich bin also vielseitig und bin gerne im Kontakt mit Menschen aller Art.</p>
           </div>
           <div class="col-md-6 about-tools">
-            <p class="text-center">Here's a few of the tools I use</p>
+            <p class="text-center">Kein Profi, aber dies sind einige meiner Tools</p>
               <div class="col-xs-6">
                 <ul>
                   <img class= "logo" src="./html.png" alt="HTML5">
@@ -80,72 +120,68 @@
                 </ul>
               </div>
               </div>
-            
-          </div>
-          <div class="row break">
-            <div class="col-md-6 about-last">
-              <p class="text-center">Check out my latest projects <span class="glyphicon glyphicon-arrow-down"></span></p>
-            </div>
           </div>
         </div> 
       </div><!-- End #About -->
 
       <div id="portfolio" class="row cover">
-        <h2 class="text-center">Portfolio</h2>
+        <h2 class="text-center">Mein Lebenslauf</h2>
         <div class="container">
           <div class="row portfolio-projects"> <!-- Two project row-->
-            <div class="col-lg-6"> <!--1st side project -->
+            <div class="col-md-6"> <!--1st side project -->
               <div class="row"> 
-                <div class="col-sm-5 text-center">
-                  <h4 class="portfolio-projects--title">Earth Quotes</h4>
-                  <p class="portfolio-projects--desc">Random quotes shown over google earth images</p>
-                  <p class="portfolio-projects--desc">Uses: Javascript, JQuery, Bootstrap</p>
-                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Earth-Quotes/#" role="button">View Project</a>
+                <div class="col-md-2 text-center">
+                  <h4 class="portfolio-projects--title">Valiant Bank - Junior Business Analyst</h4>
+                  <p class="portfolio-projects--desc">Mai 2022 - aktuell</p>
+                  <p class="portfolio-projects--desc">Konzeptionelle Arbeiten, Testing sowie Use Case Arbeiten im Bereich Web Security (Authentification)</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://play.google.com/store/apps/details?id=com.valiant.mobilebanking.release" role="button">App jetzt herunterladen (Beta Version)</a>
                 </div>
-                <div class="col-sm-7 text-center">
-                  <img class="portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-quotes.png">
+                <div class="col-md-4 text-center">
+                  <img class="portfolio-projects--image-map" src="./MAP4.png" alt="Valiant App">
                 </div>
               </div>
             </div>
-            <div class="col-lg-6"> <!--2nd side project -->
+            <div class="col-md-6"> <!--2nd side project -->
               <div class="row"> 
-                <div class="col-sm-5 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
-                  <h4 class="portfolio-projects--title">Task Timer</h4>
-                  <p class="portfolio-projects--desc">A Pomodoro clock timer with a task list integration</p>
-                  <p class="portfolio-projects--desc">Uses: Javascript, JQuery, Bootstrap</p>
-                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Task-Timer/" role="button">View Project</a>
+                <div class="col-md-2 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <h4 class="portfolio-projects--title">Valiant Bank AG - Werkstudent Fokus Mobile Banking</h4>
+                  <p class="portfolio-projects--desc">Juli 2021 - April 2022</p>
+                  <p class="portfolio-projects--desc">Konzeptionelle Arbeiten & Testing</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://jobs.valiant.ch/offene-stellen/werkstudent-in-digital-banking-befristet-bis-31-12-2023/a68db95c-8da6-4c7a-abe9-fd65875e2579" role="button">Nachfolger werden</a>
                 </div>
-                <div class="col-sm-7 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
-                  <img class="img-rounded portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-task-timer.png">
+                <div class="col-md-4 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <img class="img-rounded portfolio-projects--image" src="./Werkstudent.gif" alt="Valiant">
                 </div>
               </div>
             </div>
           </div><!--end Two project row-->
 
           <div class="row portfolio-projects"> <!-- Opposite Two project row-->
-            <div class="col-lg-6"> <!--1st side project -->
+            <div class="col-md-6"> <!--1st side project -->
               <div class="row"> 
-                <div class="col-sm-5 text-center">
-                  <h4 class="portfolio-projects--title">Whats the Weather</h4>
-                  <p class="portfolio-projects--desc">A weather app to check current weather conditions.</p>
-                  <p class="portfolio-projects--desc">Uses: Javascript, Jquery, APIs</p>
-                  <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Weather/" role="button">View Project</a>
+                <div class="col-md-2 text-center">
+                  <h4 class="portfolio-projects--title">Hotel Meielisalp - Rezepionist / Verantwortlicher HR</h4>
+                  <p class="portfolio-projects--desc">April 2019 - Juni 2021</p>
+                  <p class="portfolio-projects--desc">Kaufmännische Arbeiten an der Rezeption, Empfang der Gäste, Stellvertretung des Betriebsleiters bei Abwesenheiten, Verantwortlich für alle HR Arbeiten des Betriebs.</p>
+                  <a class="btn btn-rounded portfolio-projects--btn" href="https://www.meielisalp.ch/de/" role="button">Ausflug fällig?</a>
                 </div>
-                <div class="col-sm-7 text-center">
-                  <img class="img-rounded portfolio-projects--image" src="https://sonorangirl.github.io/img/weather-slice.png">
+                <div class="col-md-4 text-center">
+                  <img class="img-rounded portfolio-projects--image" src="./Meielisalp.jpg" alt="Meielisalp">
                 </div>
               </div>
             </div>
-            <div class="col-lg-6"> <!--2nd side project -->
+            <div class="col-md-6"> <!--2nd side project -->
               <div class="row"> 
-                <div class="col-sm-5 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
-                  <h4 class="portfolio-projects--title">Simon Game</h4>
-                  <p class="portfolio-projects--desc">A simple recreation of the 80s game Simon.</p>
-                  <p class="portfolio-projects--desc">Uses: Javascript, Sass, JQuery</p>
+                <div class="col-md-5 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <h4 class="portfolio-projects--title">Gamer / Möchtegern Videomaker</h4>
+                  <p class="portfolio-projects--desc">Eigentlich wäre logischerweise hier meine Ausbildung zum Kaufmann EFZ erwähnt, allerdings gibt es nicht wirklich viel Spannendes dazu zu erzählen (Ausbildung bei der Schweizerischen Post, 2015 - 2018).
+                    Deshalb habe ich mich entschieden, lieber meine Karriere als Möchtegern Videomaker hier zu vermerken (Achtung, gewisse Ironie vorhanden). Have fun :')
+                  </p>
+                  <p class="portfolio-projects--desc">Country Strike: Global Offensiv, Magix Video Deluxe, Open Broadcaster Software</p>
                   <a class="btn btn-rounded portfolio-projects--btn" href="https://sonorangirl.github.io/Simon-Game/" role="button">View Project</a>
                 </div>
-                <div class="col-sm-7 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
-                  <img class="img-rounded portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-simon.png">
+                <div class="col-md-7 text-center pull-right-sm"><!--flipped on small, unflipped on large-->
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/FF31JT9bb7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -161,9 +197,9 @@
         <div class="text-center contact-social-icons">
           <p>Oder auch auf:</p>
           <ul class="centered">
-            <a href="https://www.linkedin.com/in/emanahan"><li><i class="fa fa-linkedin-square"></i> LinkedIn</li></a>
+            <a href="https://www.linkedin.com/in/joel-bettler-845125232/"><li><i class="fa fa-linkedin-square"></i> LinkedIn</li></a>
             <a href="https://github.com/ReaxonTV"><li><i class="fa fa-github"></i> Github</li></a>
-            <a href="https://twitter.com/sonoran_girl"><li><i class="fa fa-insta"></i> Instagram</li></a>
+            <a href="https://www.instagram.com/j0el_99_/?hl=de"><li><i class="fa fa-insta"></i> Instagram</li></a>
           </ul>
         </p>
         

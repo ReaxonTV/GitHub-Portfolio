@@ -96,6 +96,25 @@ a:focus {
   outline: none !important;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 .navbar {
   height: 70px;
   background-color: #150050;
@@ -106,6 +125,9 @@ a:focus {
   margin-bottom: 0;
   border-radius: 0;
   transition: background-color 1s ease 0s;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -185,6 +207,7 @@ a:focus {
 
 .headline {
   padding-top: 6.25em;
+  text-align: left;
 }
 @media screen and (min-width: 60%) {
   .headline {
@@ -275,7 +298,7 @@ a:focus {
 }
 @media screen and (min-width: 768px) {
   .portfolio-projects--title {
-    margin-top: 20%;
+    margin-top: 15%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -285,8 +308,8 @@ a:focus {
 }
 @media screen and (min-width: 768px) {
   .portfolio-projects--desc {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 .portfolio-projects--btn {
@@ -303,6 +326,12 @@ a:focus {
 .portfolio-projects--image {
   margin-bottom: 1.875em;
   padding-top: 5%;
+}
+
+.portfolio-projects--image-map {
+  margin-bottom: 1.875em;
+  padding-top: 5%;
+  max-width: 500px;
 }
 
 #contact {
