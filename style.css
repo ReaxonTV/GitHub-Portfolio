@@ -74,6 +74,9 @@ h5 {
   padding-left: 15%;
   padding-right: 15%;
 }
+h1 {
+  font-size: 40px;
+}
 
 p {
   font-family: "Quattrocento", sans-serif;
@@ -410,4 +413,26 @@ li a {
   justify-content: center;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.top:hover .background {
+  animation: einziehenlinks 1s ease-in forwards;
+}
+
+.top:hover .lead {
+  animation: einziehenlinks 1s ease-in forwards;
+}
+
+@keyframes einziehenlinks {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
 }
