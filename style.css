@@ -298,6 +298,10 @@ li a {
 }
 .portfolio-projects--title {
   margin-top: 0.9375em;
+  font-family: "Comfortaa", Helvetica, Arial, sans-serif;
+  color: #fb2576;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 @media screen and (min-width: 768px) {
   .portfolio-projects--title {
@@ -313,6 +317,10 @@ li a {
   .portfolio-projects--desc {
     margin-top: 2%;
     margin-bottom: 2%;
+    font-family: "Quattrocento", sans-serif;
+    color: #fb2576;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 .portfolio-projects--btn {
@@ -321,6 +329,8 @@ li a {
   border: 1px solid #07374a;
   border-radius: 5px;
   margin-bottom: 1.25em;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .portfolio-projects--btn:hover {
   background: #07374a;
@@ -329,12 +339,24 @@ li a {
 .portfolio-projects--image {
   margin-bottom: 1.875em;
   padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-.portfolio-projects--image-map {
+.portfolio-projects--image-left {
   margin-bottom: 1.875em;
   padding-top: 5%;
   max-width: 500px;
+  width: 500px;
+  padding-left: 15%;
+}
+
+.portfolio-projects--image-right {
+  margin-bottom: 1.875em;
+  padding-top: 5%;
+  max-width: 500px;
+  width: 500px;
+  padding-right: 15%;
 }
 
 #contact {
@@ -429,10 +451,10 @@ li a {
 
 @keyframes einziehenlinks {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 
   100% {
-    transform: translateX(50%);
+    transform: translateX(13%);
   }
 }
