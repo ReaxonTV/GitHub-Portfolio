@@ -458,3 +458,7 @@ li a {
     transform: translateX(13%);
   }
 }
+
+.wholepage {
+  background-color: black;
+}
