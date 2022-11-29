@@ -69,7 +69,7 @@ h3,
 h4,
 h5 {
   font-family: "Comfortaa", Helvetica, Arial, sans-serif;
-  color: #fb2576;
+  color: #a215d8;
   text-align: center;
   padding-left: 15%;
   padding-right: 15%;
@@ -80,7 +80,7 @@ h1 {
 
 p {
   font-family: "Quattrocento", sans-serif;
-  color: #fb2576;
+  color: #a215d8;
   text-align: center;
   padding-left: 15%;
   padding-right: 15%;
@@ -285,7 +285,7 @@ li a {
 }
 
 #portfolio {
-  background-color: #25b79f;
+  background-color: #291665;
 }
 #portfolio h2 {
   padding-bottom: 1.25em;
@@ -299,9 +299,11 @@ li a {
 .portfolio-projects--title {
   margin-top: 0.9375em;
   font-family: "Comfortaa", Helvetica, Arial, sans-serif;
-  color: #fb2576;
+  color: #a215d8;
   padding-left: 15%;
   padding-right: 15%;
+  font-size: 22px;
+  text-decoration: underline;
 }
 @media screen and (min-width: 768px) {
   .portfolio-projects--title {
@@ -318,22 +320,22 @@ li a {
     margin-top: 2%;
     margin-bottom: 2%;
     font-family: "Quattrocento", sans-serif;
-    color: #fb2576;
+    color: #a215d8;
     padding-left: 15%;
     padding-right: 15%;
   }
 }
 .portfolio-projects--btn {
   background: transparent;
-  color: #07374a;
-  border: 1px solid #07374a;
+  color: #a215d8;
+  border: 1px solid #a215d8;
   border-radius: 5px;
   margin-bottom: 1.25em;
   padding-left: 15%;
   padding-right: 15%;
 }
 .portfolio-projects--btn:hover {
-  background: #07374a;
+  background: #a215d8;
   color: #f0f0e6;
 }
 .portfolio-projects--image {
@@ -349,6 +351,7 @@ li a {
   max-width: 500px;
   width: 500px;
   padding-left: 15%;
+  float: left;
 }
 
 .portfolio-projects--image-right {
@@ -461,4 +464,32 @@ li a {
 
 .wholepage {
   background-color: black;
+}
+
+.links {
+  padding-top: 5%;
+  text-align: center;
+  color: #a215d8;
+  font-size: 22px;
+}
+
+.profile-img {
+  margin-bottom: 5%;
+}
+
+.contact-header {
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+
+.contact-email {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: 22px;
+}
+
+.contact-social-icons {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  text-align: center;
 }

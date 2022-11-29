@@ -1,3 +1,7 @@
+import AOS from "aos";
+
+AOS.init();
+
 $(document).ready(function () {
   // Transition effect for navbar and back-to-top icon
   $(window).scroll(function () {
@@ -33,3 +37,21 @@ $(document).ready(function () {
     $.scrollTo(0, 1000);
   });
 });
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);

@@ -1,16 +1,9 @@
 # GitHub-Portfolio
 
-Vorstellung über eine eigene Website
-Ideen Layout:
-Sprachen -> je nachdem, welche Flagge man anklickt, wechselt die Sprache der Website
-Kalender -> (welcher von Event zu Event springt)
-Goals -> Optionen anzeigen, ?, Wieso nicht alles!, mit Wegwisch Elementen)
-Kontakt -> Angaben machen, nach Absenden wird eine Animation durchgeführt und die "Angaben" versendet
-Einarbeitung einer Spotify Playlist
-
-Ideen Umfang:
-Sprachen (Portugiesisch, Französisch, Englisch, Deutsch)
-Lebenslauf (Abschluss Schule, Kaufmann EFZ, Business of my dad (hotel management), Testing new Mobile App of a Swiss Bank, Junior Business Analyst (Integration and Services))
-Goals (Travel the world, Start a family, carrer as ...? -> Why not all of it)
-Kontakt (Name, Vorname, Kontaktmöglichkeiten, Grund der Anfrage)
-Spotify Playlist (Coding Music)
+Quellenverzeichnis:
+Farbschema: https://imagecolorpicker.com/de (Mithilfe dieses Color Pickers konnte ich das Farbschema der Website am Hintergrundbild "Champions League.jpg" anpassen und danach ausrichten)
+Spotify Player: How to Add Spotify Player to Website
+Bootstrap Tutorial: https://getbootstrap.com/docs/4.0/content/images/
+Animate Style: https://animate.style/
+Animations with CSS: https://www.youtube.com/watch?v=YszONjKpgg4
+Animations with CSS / Library: https://github.com/michalsnik/aos

@@ -17,6 +17,7 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body class="wholepage">
@@ -29,8 +30,8 @@
           </button>
           <a class="navbar-brand" href="#">Joel Bettler</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
+        <div id="navbar" class="navbar-collapse">
+          <ul class="nav">
             <li id="nav-about"><a href="#about">Über mich</a></li>
             <li id="nav-portfolio"><a href="#portfolio">Lebenslauf</a></li>
             <li id="nav-contact"><a href="#contact">Kontakt</a></li>
@@ -59,24 +60,24 @@
       
       
       <div id="about" class="row cover">
-        <h2 class="text-center">Über mich</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000" class="text-center">Über mich</h2>
         <div class="row">
           <div class="col-md-12 text-center about-info">
-            <img class="profile-img" src="./Joel.jpg">
-            <p class="text-center">Wer ich bin? Nun ich bin vieles: Fussball-Fanatiker, treuer Fan, Möchtegern Gamer, noch mehr Möchtegern Videomaker, 
+            <img data-aos="zoom-in" data-aos-duration="2000" class="profile-img" src="./Joel.jpg">
+            <p data-aos="fade-down" data-aos-duration="1000" class="text-center">Wer ich bin? Nun ich bin vieles: Fussball-Fanatiker, treuer Fan, Möchtegern Gamer, noch mehr Möchtegern Videomaker, 
               Junior Business Analyst bei der Valiant Bank, schnell Begeisterungsfähig, noch schneller Motivationsverlierend.... ich bin also vielseitig und bin gerne im Kontakt mit Menschen aller Art.</p>
           </div>
           <div class="col-md-12 about-tools">
-            <p class="text-center">Kein Profi, aber dies sind einige meiner Tools</p>
+            <p data-aos="fade-down" data-aos-duration="1000" class="text-center">Kein Profi, aber dies sind einige meiner Tools</p>
               <div class="col-xs-12">
                 <ul>
-                  <img class= "logo animate__animated animate__fadeInLeft" src="./html.png" alt="HTML5">
-                  <img class= "logo animate__animated animate__fadeInRight" src="./css.png" alt="CSS3">
-                  <img class= "logo animate__animated animate__fadeInLeft" src="./Javascipt.png" alt="JavaScript">
-                  <img class= "logo animate__animated animate__fadeInRight" src="./Bootstrap.png" alt="Bootstrap">
-                  <img class= "logo animate__animated animate__fadeInLeft" src="./Python.png" alt="Python">
-                  <img class= "logo animate__animated animate__fadeInRight" src="./rstudio.png" alt="R Studio">
-                  <img class= "logo animate__animated animate__fadeInLeft" src="./github.png" alt="GitHub">
+                  <img data-aos="slide-left" data-aos-duration="2000" class= "logo" src="./html.png" alt="HTML5">
+                  <img data-aos="slide-right" data-aos-duration="2000" class= "logo" src="./css.png" alt="CSS3">
+                  <img data-aos="slide-left" data-aos-duration="2000" class= "logo" src="./Javascipt.png" alt="JavaScript">
+                  <img data-aos="slide-right" data-aos-duration="2000" class= "logo" src="./Bootstrap.png" alt="Bootstrap">
+                  <img data-aos="slide-left" data-aos-duration="2000" class= "logo" src="./Python.png" alt="Python">
+                  <img data-aos="slide-right" data-aos-duration="2000" class= "logo" src="./rstudio.png" alt="R Studio">
+                  <img data-aos="slide-left" data-aos-duration="2000" class= "logo" src="./github.png" alt="GitHub">
                 </ul>
               </div>
               </div>
@@ -85,50 +86,49 @@
       </div><!-- End #About -->
 
       <div id="portfolio" class="row cover">
-        <h2 class="text-center">Mein Lebenslauf</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000" class="text-center">Mein Lebenslauf</h2>
         <div class="container">
           <div class="row portfolio-projects"> <!-- Two project row-->
             <div class="col-lg-6 justify-content-start">
-              <div class="portfolio-projects--title">Valiant Bank - Junior Business Analyst</div>
-              <div class="portfolio-projects--desc">Mai 2022 - aktuell</div>
-              <div class="portfolio-projects--desc">Konzeptionelle Arbeiten, Testing sowie Use Case Arbeiten im Bereich Web Security (Authentification)</div>
-              <div class="text-center">
-                <img class="img-responsive portfolio-projects--image-left" src="./MAP4.png" alt="Valiant App">
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--title">Valiant Bank - Junior Business Analyst</div>
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--desc">Juli 2021 - aktuell</div>
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--desc">Im Juli 2021 bekam ich eine Stelle als Werkstudenten mit Fokus Mobile Banking bei der Valiant Bank AG. Dort durfte ich ein Jahr lang 
+                bei der Konzeption und Testing einer Banking App Erfahrungen sammeln und bekam darauffolgend eine Stelle als Junior Business Analyst. Seitdem kann ich mein theoretisches Wissen,
+                welches ich an der BFH erlerne, in die Praxis umsetzen. Die App ist seit diesem Sommer für ausgewählte Kundinnen und Kunden zugänglich, am Ende meines Lebenslaufes ist die Store Verlinkungen
+                angegeben. Willst auch du Kunde der Valiant werden und die App im Alltag benutzen? Melde dich bei mir!
               </div>
-              <a class="btn btn-rounded portfolio-projects--btn" href="https://play.google.com/store/apps/details?id=com.valiant.mobilebanking.release" role="button">App jetzt herunterladen (Beta Version)</a>
+              <div class="text-center">
+                <img data-aos="slide-left" data-aos-duration="2000" class="img-responsive portfolio-projects--image-left" src="./MAP4.png" alt="Valiant App">
+              </div>
             </div>
           </div>
               <div class="col-lg-6 text-end justify-content-end pull-right-sm"><!--flipped on small, unflipped on large-->
-                <div class="portfolio-projects--title">Valiant Bank AG - Werkstudent Fokus Mobile Banking</div>
-                <div class="portfolio-projects--desc">Juli 2021 - April 2022</div>
-                <div class="portfolio-projects--desc">Konzeptionelle Arbeiten & Testing</div>
-                <div>
-                  <img class="img-responsive portfolio-projects--image-right" src="./Werkstudent.gif" alt="Valiant">
+                <div data-aos="slide-right" data-aos-duration="2000" class="portfolio-projects--title">Receptionist im elterlichen Betrieb / Unterstützung des Betriebsleiters</div>
+                <div data-aos="slide-right" data-aos-duration="2000" class="portfolio-projects--desc">April 2019 - Juni 2021</div>
+                <div data-aos="slide-right" data-aos-duration="2000" class="portfolio-projects--desc">Meine Kindheit verbrachte ich im elterlichen Betrieb! Diese haben seit 25 Jahren ein Hotel hoch über dem Thunersee. Nach meiner Lehre und einem halbjährigen
+                  Auslandaufenthalt in Australien, Indien und Nepal arbeitete ich im Hotel für zwei Jahre als Rezeptionist und unterstütze meine Eltern überall wo es nur ging. Das Hotel ist ausgelegt für 
+                Einzelgäste und Seminare, hebt sich dank der traumhaften Aussicht auf den Thunersee von den Restaurants in der Umgebung ab. Neugierig oder ein Seminar geplant? Zu unterst findet ihr einen Link zur Website des Hotels. </div>
+                <div> 
+                  <img data-aos="slide-right" data-aos-duration="2000" class="img-responsive portfolio-projects--image-right" src="./Meielisalp.jpg" alt="Meielisalp">
                 </div>
-                <a class="justify-content-end btn-right btn btn-rounded portfolio-projects--btn" href="https://jobs.valiant.ch/offene-stellen/werkstudent-in-digital-banking-befristet-bis-31-12-2023/a68db95c-8da6-4c7a-abe9-fd65875e2579" role="button">Nachfolger werden</a>
               </div>
             </div>
             <div class="col-lg-6 justify-content-start"> <!--1st side project -->
-              <div class="portfolio-projects--title">Hotel Meielisalp - Rezepionist / Verantwortlicher HR</div>
-              <div class="portfolio-projects--desc">April 2019 - Juni 2021</div>
-              <div class="portfolio-projects--desc">Kaufmännische Arbeiten an der Rezeption, Empfang der Gäste, Stellvertretung des Betriebsleiters bei Abwesenheiten, Verantwortlich für alle HR Arbeiten des Betriebs.</div>
-              <div>
-                  <img class="img-responsive portfolio-projects--image-left" src="./Meielisalp.jpg" alt="Meielisalp">
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--title">Gamer / Möchtegern Videomaker</div>
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--desc">Eigentlich wäre logischerweise hier meine Ausbildung zum Kaufmann EFZ erwähnt, allerdings gibt es nicht wirklich viel Spannendes dazu zu erzählen (Ausbildung bei der Schweizerischen Post, 2015 - 2018).
+                Deshalb habe ich mich entschieden, lieber meine Karriere als Möchtegern Videomaker hier zu vermerken (Achtung, gewisse Ironie vorhanden). Have fun :')</div>
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--desc">Country Strike: Global Offensiv, Magix Video Deluxe, Open Broadcaster Software</div>
+              <div data-aos="slide-left" data-aos-duration="2000" class="portfolio-projects--image-left">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FF31JT9bb7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              <a class="btn btn-rounded portfolio-projects--btn" href="https://www.meielisalp.ch/de/" role="button">Ausflug fällig?</a>
+
             </div>
+            <div data-aos="fade-down" data-aos-duration="1000" class="links">
+              Linkliste
             </div>
-              <div class="col-lg-6 text-end justify-content-end pull-right-sm"><!--flipped on small, unflipped on large-->
-                <div class="portfolio-projects--title">Gamer / Möchtegern Videomaker</div>
-                <div class="portfolio-projects--desc">Eigentlich wäre logischerweise hier meine Ausbildung zum Kaufmann EFZ erwähnt, allerdings gibt es nicht wirklich viel Spannendes dazu zu erzählen (Ausbildung bei der Schweizerischen Post, 2015 - 2018).
-                    Deshalb habe ich mich entschieden, lieber meine Karriere als Möchtegern Videomaker hier zu vermerken (Achtung, gewisse Ironie vorhanden). Have fun :')
-                </div>
-                <div class="portfolio-projects--desc">Country Strike: Global Offensiv, Magix Video Deluxe, Open Broadcaster Software</div>
-                <div>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/FF31JT9bb7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>  
-              </div>
-            </div>
+            <a data-aos="flip-up" data-aos-duration="1000" class="btn btn-rounded portfolio-projects--btn" href="https://play.google.com/store/apps/details?id=com.valiant.mobilebanking.release" role="button">Jetzt Valiant Kunde werden und die neue App herunterladen (Beta Version)</a>
+            <a data-aos="flip-up" data-aos-duration="1000" class="btn btn-rounded portfolio-projects--btn" href="https://www.meielisalp.ch/de/">Auszeit gefällig oder Seminar planen? Alle Infos auf unserer Website!</a>
+            <a data-aos="flip-up" data-aos-duration="1000" class="btn btn-rounded portfolio-projects--btn" href="https://www.youtube.com/@reaxontv1574" role="button">Nah - hat dir das Video gefallen? Weitere 4 Clips findest du hier!</a>
           </div>
         </div>
       </div>
@@ -156,4 +156,9 @@
     </footer>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
