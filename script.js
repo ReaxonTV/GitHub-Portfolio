@@ -1,57 +1,70 @@
-import AOS from "aos";
+// den Submit-Button abrufen
+const submitButton = document.getElementById("submit-button");
 
-AOS.init();
+// auf Klick-Event des Submit-Buttons hören
+submitButton.addEventListener("click", function () {
+  // leere Objekte erstellen, um die aggregierten Ergebnisse zu speichern
+  const kategorieScores = {
+    datenverarbeitung: 0,
+    kommunikation: 0,
+    erstellung: 0,
+    sicherheit: 0,
+    problemloesung: 0,
+  };
+  const results = {};
 
-$(document).ready(function () {
-  // Transition effect for navbar and back-to-top icon
-  $(window).scroll(function () {
-    // checks if window is scrolled more than 500px, adds/removes solid class
-    if ($(this).scrollTop() > 550) {
-      $(".navbar").addClass("solid");
-      $(".back-to-top").addClass("visible");
+  // alle Fragen durchgehen
+  const questions = document.querySelectorAll(".kategorie select");
+  questions.forEach(function (question, index) {
+    // die Antwort auswählen
+    const answer = question.value;
+
+    // den Score für die Antwort berechnen und speichern
+    let score;
+    switch (answer) {
+      case "a":
+        score = 0;
+        break;
+      case "b":
+        score = 1;
+        break;
+      case "c":
+        score = 2;
+        break;
+      case "d":
+        score = 3;
+        break;
+      default:
+        score = null;
+        break;
+    }
+    results[`question${index + 1}`] = score;
+
+    // aggregierte Scores berechnen
+    if (index < 6) {
+      kategorieScores.datenverarbeitung += score;
+    } else if (index < 12) {
+      kategorieScores.kommunikation += score;
+    } else if (index < 21) {
+      kategorieScores.erstellung += score;
+    } else if (index < 30) {
+      kategorieScores.sicherheit += score;
     } else {
-      $(".navbar").removeClass("solid");
-      $(".back-to-top").removeClass("visible");
+      kategorieScores.problemloesung += score;
     }
   });
 
-  // Scrolling effect for Arrow icons
-  $("#scrollIcon").click(function (e) {
-    e.preventDefault();
-    $.scrollTo($("#about"), 1000);
-  });
-  $("#nav-about").click(function (e) {
-    e.preventDefault();
-    $.scrollTo($("#about"), 1000);
-  });
-  $("#nav-portfolio").click(function (e) {
-    e.preventDefault();
-    $.scrollTo($("#portfolio"), 1000);
-  });
-  $("#nav-contact").click(function (e) {
-    e.preventDefault();
-    $.scrollTo($("#contact"), 1000);
-  });
-  $(".navbar-brand").click(function (e) {
-    e.preventDefault();
-    $.scrollTo(0, 1000);
-  });
+  // die aggregierten Ergebnisse in das Ergebnisobjekt einfügen
+  results["kategorieScores"] = kategorieScores;
+
+  // die Ergebnisse als JSON-String speichern
+  const jsonResults = JSON.stringify(results);
+
+  // die Ergebnisse in einer JSON-Datei speichern (z.B. "results.json")
+  const blob = new Blob([jsonResults], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "results.json";
+  a.click();
 });
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
